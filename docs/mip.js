@@ -49,11 +49,11 @@ function sendCommand(...bytes) {
 }
 
 function moveForward() {
-    sendCommand(0x71, 0x16, 0xb8);
+    sendCommand(0x71, 0x21, 0xb8);
 }
 
 function moveBackward() {
-    sendCommand(0x72, 0x16, 0xb8);
+    sendCommand(0x72, 0x21, 0xb8);
 }
 
 function turnLeft() {
