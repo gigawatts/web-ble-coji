@@ -18,6 +18,7 @@ function connect() {
         .then(device => {
             console.log('> Found ' + device.name);
             console.log('Connecting to GATT Server...');
+	    document.getElementById("connstatus").innerHTML = "Connecting..."
             return device.gatt.connect();
         })
         .then(server => {
@@ -31,10 +32,12 @@ function connect() {
         })
         .then(characteristic => {
             console.log('All ready!');
+	    document.getElementById("connstatus").innerHTML = "Connected!"
             commandCharacteristic = characteristic;
         })
         .catch(error => {
             console.error('Device connection failed', error);
+	    document.getElementById("connstatus").innerHTML = "Connection failed"
         });
 }
 
