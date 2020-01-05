@@ -10,4 +10,6 @@ Currently works only with Chrome 53 ([Beta Channel]()) or newer. In Chrome Stabl
 
 ➡ [Open Online Demo](https://gigawatts.github.io/web-ble-coji)
 
+Keyboard arrow keys can also be used to control the robot.
+
 ![Web Bluetooth MiP in Action](screenshots/interface.jpg)
