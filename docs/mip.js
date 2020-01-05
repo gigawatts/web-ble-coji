@@ -49,11 +49,11 @@ function sendCommand(...bytes) {
 }
 
 function moveForward() {
-    sendCommand(0x71, 0x32, 0x32);
+    sendCommand(0x71, 0x40, 0x32);
 }
 
 function moveBackward() {
-    sendCommand(0x72, 0x32, 0x32);
+    sendCommand(0x72, 0x40, 0x32);
 }
 
 function turnLeft() {
@@ -65,20 +65,19 @@ function turnRight() {
 }
 
 function getKeyAndMove(e){				
-		var key_code=e.which||e.keyCode;
-		switch(key_code){
-			case 37: //left arrow key
-				turnLeft();
-				break;
-			case 38: //Up arrow key
-				moveForward();
-				break;
-			case 39: //right arrow key
-				turnRight();
-				break;
-			case 40: //down arrow key
-				moveBackward()
-                ;
-				break;						
-		}
+	var key_code=e.which||e.keyCode;
+	switch(key_code){
+		case 37: //left arrow key
+			turnLeft();
+			break;
+		case 38: //Up arrow key
+			moveForward();
+			break;
+		case 39: //right arrow key
+			turnRight();
+			break;
+		case 40: //down arrow key
+			moveBackward();
+			break;						
 	}
+}
