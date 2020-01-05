@@ -63,3 +63,22 @@ function turnLeft() {
 function turnRight() {
     sendCommand(0x74, 0x10, 0xb8);
 }
+
+function getKeyAndMove(e){				
+		var key_code=e.which||e.keyCode;
+		switch(key_code){
+			case 37: //left arrow key
+				turnLeft();
+				break;
+			case 38: //Up arrow key
+				moveForward();
+				break;
+			case 39: //right arrow key
+				turnRight();
+				break;
+			case 40: //down arrow key
+				moveBackward()
+                ;
+				break;						
+		}
+	}
